@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 </head>
-<body>
-    <h1 class="main">This is on MAIN.HANDLEBARS</h1>
-    <div class="main">
-    {{>nav/nav-index}}
-    {{>nav/nav-profile}}
+<body class="mainly">
+    <div class="navigation">
+        {{>nav/nav-index}}
+        {{>nav/nav-profile}}
     </div>
+
+    <br><br>
+
     {{{body}}}
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
