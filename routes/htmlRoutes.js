@@ -1,11 +1,16 @@
-
-
 module.exports = function(app) {
     console.log("++++++++++++++htmlRoutes++++++++++++++");
-    app.get("/", function(req, res) {
-        console.log("/");
+
+    // var db = require("./models");
+    
+    app.get("/", function(req, res){
+        console.log("/profile");
+        res.render("profile", { stuff: "anything you want" });
+    });
+    
+    app.get("/index", function(req, res) {
+        console.log("/index");
         res.render("index",{data: "mush"});
     });
-
     
 };

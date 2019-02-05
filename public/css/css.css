@@ -1,349 +1,322 @@
-.carouselbox {
-    font-family: helvetica,sans-serif;
-    font-size: 14px;
-    width: 900px;
-    position: relative;
-    margin: 1em;
-    margin-left: auto;
-    margin-right: 15%;
-    bottom: 0px;
-}
-.content {
-    margin: 0;
-    padding: 0;
-}
-.content li {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    list-style: none;
-    text-align: center;
-    z-index: 2;
-}
-.active {
-    height: 700px;
-}
-.active li {
-    position: absolute;
-    top: 200px;
-}
-.active li.current {
-    top: 30px;
-}
-.buttons {
-    display: inline-block;
-}
-.active .buttons {
-    display: block;
-    padding: 5px 0;
-    background: #eee;
-    text-align: center;
-    z-index: 10;
-    position: relative;
-}
-.carouselbox button {
-    border: none;
-    visibility: hidden;
-}
-.active button {
-    visibility: visible;
-} 
-.offscreen {
-    position: absolute;
-    left: -22000px;
-}
-.image{
-    width: 100%;
-    height: 100%;
-}
-.current{
-    visibility: visible;
-}
-.projectTitle{
-    text-align: center;
-    font-size: 82px;
-    
-}
-li{
-    visibility: hidden;
-}
+* {box-sizing: border-box;}
 
-.button{
-    display: inline-block;
-    position: fixed;
+body{
+  background: brown;
 }
 
 .background{
-    background-image: url("../../assets/images/4k-monument-valley-desert-mountains-cliffs.jpg");
+  position: relative;
+  width: 100%;
+  background-image: url("../images/4k-monument-valley-desert-mountains-cliffs.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  padding-right: 5%;
+  padding-left: 5%;
+  color: rgb(114, 12, 12);
+}
+
+.magnifyer{
+  position: absolute;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 100px;
+  height: 100px;
+}
+
+
+.button{
+  display: inline-block;
+}
+.grid2{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.main{
+  position: fixed;
+  z-index: 20;
+}
+.shadowOut{
+  box-shadow: 5px 0px 75px 20px #7c6e49;
+}
+.shadowIn{
+  box-shadow: 0px 0px 100px 30px #7c6e49 inset;
+}
+.bigShadowIn{
+  box-shadow: 0px 0px 400px 100px #7c6e49 inset;
+}
+
+
+#homeBtn{
+  top: 1%;
+  left: 1%;
+}
+#profileBtn{
+  top: 1%;
+  left: 5%;
+}
+
+
+
+
+.picture{
+  position: fixed;
+  margin-top: 10%;
+  left: 50px;
+  width: 1500px;
+  height: 500px;
+}
+  .profilePic{
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%;
-    position: relative;
-    padding: 0 10%;
-}
-p{
-    line-height: 1.5;
-    font-size: 24px;
-    margin: 0 13%;
-}
-ul{
-    line-height: 1.5;
-    font-size: 24px;
-    margin: 0 10%;
-}
-li{
-    list-style-type: disc;
-    margin: 0 5%;
-}
-
-.width100{
-    width: 100%;
-}
-.main{
-    position: fixed;
-}
-.card{
-    width: 100%;
-    position: relative;
-    opacity: .8;
-    margin: 0 auto;
-}
-.grid2{
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-.profilePic{
-    background: url("../images/IMG_5890.JPG");
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    position: fixed;
     transform: rotate(90deg);
-    width: 600px;
-    margin: 15% auto 4% auto;
     border-radius: 2%;
+    z-index: 6;
+    box-shadow: 15px -15px 50px #302e28;
+  }
+.name{
+  margin-top: -900px;
+  width: 700px;
+  height: 250px;
+  left: 40%;
+  padding-left: 5%;
+  display: inline-block;
 }
-.shadowOut{
-    box-shadow: 5px 0px 75px 20px #7c6e49;
-}
-.shadowIn{
-    box-shadow: 0px 0px 100px 30px #7c6e49 inset;
-}
-.vital{
-    position: relative;
-    display: inline-block;
-    margin: 5% 20% 0% 5%;
-}
-.title{
-    font-size: 22px;
-    margin-left: 7%;
-}
+  .myName{
+    font-size: 48px;          
+  }
+  .title{
+    font-size: 32px;
+  }
 .email{
-    font-size: 22px;
+  margin-top: 1500px;
+  vertical-align: center;
+  height: 400px;
+  width: 700px;
+  top: 300px;
+  right: 15%;
+  font-size: 22px;
+  padding: 5%;
+  text-shadow: 2px 2px 4px #000000;
 }
-.linkedIn{
+.projectCarousel{
+  margin-top: 1800px;
+  display: inline-block;
+  height: 300px;
+  width: 500px;
+  font-size: 22px;
+  text-shadow: 2px 2px 4px #000000;
+  left: 50%;
+}
+  .image{
+    width: 200px;
+    height: 200px;
+    border-radius: 4%;
+    margin-top: 4%;
+  }
+  .appBtn{
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 100%;
+    width: 60%;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+.elsewhere{
+  margin-top: 3000px;
+  bottom: 0;
+  padding: 2% 5% 1% 40%;
+  z-index: 5;
+  height: 400px;
+  width: 95%;
+  right: -10%;
+  text-shadow: 2px 2px 4px #000000;
+}
+  .elsewhereTitle{
+    position: relative;
+    left: 5%;
+  }
+  .linkedIn{
+    width: 400px;
+    height: 100px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 70% 20% 10%;
+    right: 0;
+  }
+  .linked{
+    position: relative;
+    font-weight: bold;
+    font-size: 56px;
+    text-align: right;
+  }
+  .in{
     background: url("../images/In-2CRev-34px-R.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%;
-    width: 25px;
-    height: 24px;
+    height: 56px;
     position: relative;
-    display: inline-block;
-    right: 0;
-}
-.tm{
+  }
+  .tm{
     font-size: 12px;
     position: relative;
-    display: inline-block;
     left: 0;
     font-weight: bold;
-}
-.linked{
-    position: relative;
-    right: 0;
-    font-weight: bold;
-}
-.gitHub{
+    text-align: left;
+  }
+  .gitHubText{
+    font-size: 36px;    
+  }
+  .gitHub{
     background: url("../images/Octocat.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%;
-    width: 25px;
-    height: 24px;
-    position: relative;
-    display: inline-block;
-}
-.elsewhere{
-    padding: 2% 10% 1% 30%;
-}
-.vitalTitle{
-    margin-left: 7%;
-    font-size: 32px;
-    font-weight: bold;
-}
-.image{
-    width: 100%;
-    height: 100%;
-    border-radius: 4%;
-    margin-top: 4%;
-}
-.vitals{
-    position: relative;
-    top: 0px;
-    padding-bottom: 3%;
-}
-.bannerText{
-    opacity: 1;
-    font-size: 48px;
-}
-.nameFix{
-    height: 15%;
-}
-
-
-
-@media only screen and (max-width: 1000px){
-    .mini{
-        display: block;
-    }
-    .max{
-        display: none;
-    }
-    .profilePic{
-        margin-top: 20%;
-        left: -10%;
-        width: 120%;
-        height: 100%;
-    }
-    .myName{
-        font-size: 190%;
-    }
-    .title{
-        font-size: 150%;
-        margin: 0;
-        padding: 0;
-    }
-    .vitals{
-        margin-top: 15%;
-    }
-    .vitalTitle{
-        font-size: 150%;
-    }
-    .email,
-    .portfolio{
-        position: relative;
-        display: block;
-    }
-    .portfolio{
-        font-size: 150%;
-        position: absolute;
-        width: auto;
-        height: auto;
-        background: none;
-        border: none;
-    }
-    .bod{
-        margin: 0;
-        width: 100%;
-        opacity: .9;
-    }
-    .sectionHead{
-        font-size: 150%;
-    }
-    .vitalData{
-        font-size: 100%;
-    }
-    .card{
-        display: block;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        position: relative;
-    }
-    .vital{
-        margin: 0;
-    }
-    .socialBottom{
-        width: 100%;
-        margin: 0;
-        padding: 0 0 0 10%;
-    }
-    .edList{
-        font-size: 110%;
-        margin: 5%;
-    }
-
-    
-    p{
-        font-size: 100%;
-        margin: 0 5%;
-        opacity: .6;
-    }
-}
-
-#homeBtn{
-    top: 1%;
-    left: 1%;
-}
-#profileBtn{
-    top: 1%;
-    left: 5%;
-}
-
-/* ******************************************
-Scrolling at varying speeds
-****************************************** */
-.contents {
-    height: 3000px;
-}
-  
-.wrapper {
-    position: fixed;
-}
-  
-.wrapper .box {
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
-    font-size: 160%;
-    color: #fff;
+    height: 56px;
+    width: 56px;
     position: absolute;
-    background: #ff8330;
+  }
+.screen{
+  margin-top: -1050px;
+  left: -15%;
+  height: 1000px;
+  width: 130%;
+  /* background-color: red; */
 }
-  
-.wrapper .box:nth-of-type(2) {
-    left: 100px;
-    background: #E01B5D;
+.screenImg{
+  background: url("../images/topo");
+  transform: rotate(180deg);
+  background-repeat: repeat-x;
+  background-size: cover;
+  opacity: .1;
+  width: 100%;
+  height: 100%;
 }
-  
-.wrapper .box:nth-of-type(3) {
-    left: 200px;
-    background: #30FFFF;
-}
-  
-.wrapper .box:nth-of-type(4) {
-    left: 300px;
-    background: #B3FF30;
-}
-  
-.wrapper .box:nth-of-type(5) {
-    left: 400px;
-    background: #308AFF;
-}
-  
-.wrapper .box:nth-of-type(6) {
-    left: 500px;
-    background: #1BE059;
+.mission{
+  border-top: solid;
+  width: 1100px;
+  height: 400px;
+  margin-left: 5%;
+  margin-top: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 32px;
+  text-shadow: 2px 2px 4px #000000;
+  left: 25%;
 }
 
-.bigBox {
-    height: 500px;
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    border: solid;
+
+.bigBox{
+  z-index: 0;
+  position: relative;
+  height: 2000px;
+  border-right: solid;
+  border-left: solid;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.letterBoxes{
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+.box{
+  position: absolute;
+  top: 50%;
+}
+#aleph{
+  background: green;
+}
+#beth{
+  background: yellowgreen;
+}
+#gimel{
+  background: yellow;
+}
+#daleth{
+  background: orange;
+}
+#heh{
+  background: orangered;
+}
+
+
+/* .drop{
+  top: 500px;
+  width: 200px;
+  height: 200px;
+} */
+.drop1{
+  top: 500px;
+  width: 250px;
+  height: 250px;
+}
+.drop2{
+  top: 500px;
+  width: 200px;
+  height: 200px;
+}
+.drop3{
+  top: 500px;
+  width: 150px;
+  height: 150px;
+}
+.drop4{
+  top: 500px;
+  width: 100px;
+  height: 100px;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  from {top: -2200px;}
+  to {top: 2000px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+  from {top: -2200px;}
+  to {top: 2000px;}
+}
+
+.a1{
+  position :relative;
+  display: inline-block;
+  -webkit-animation: mymove 17s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 17s infinite;
+}
+.a2{
+  position :relative;
+  display: inline-block;
+  -webkit-animation: mymove 21s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 21s infinite;
+}
+.a3{
+  position :relative;
+  display: inline-block;
+  -webkit-animation: mymove 24s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 24s infinite;
+}
+.a4{
+  position :relative;
+  display: inline-block;
+  -webkit-animation: mymove 35s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 35s infinite;
+}
+.a5{
+  position :relative;
+  display: inline-block;
+  -webkit-animation: mymove 42s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 42s infinite;
+}
+.projectDrop{
+  margin-top: -500px;
+  top: -500px;
 }
