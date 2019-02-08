@@ -6,7 +6,7 @@
 
 
 $(document).ready(function(){
-  
+  $(window).scrollTop(0);
 
   // ****************************************************************
   // PARALLAX SCROLLING
@@ -71,8 +71,8 @@ $(document).ready(function(){
   //   })
   // })
 
-  $(window).scrollTop(0);
-  console.log("scrollTop");
+  // $(window).scrollTop(0);
+  // console.log("scrollTop");
 
   $("#top").on("click", () => {
     console.log("top");
