@@ -1,3 +1,6 @@
+---
+permalink: /index.html
+---
 # my-portfolio
 A demonstration of my progress as a developer
 ## HEN short stack
@@ -7,6 +10,3 @@ This page is rendered using **H**andlebars on an **E**xpress server in **N**ode.
 ### Styling
 - Materialize
 - my own ingenuity
----
-permalink: /index.html
----
