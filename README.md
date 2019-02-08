@@ -1,6 +1,3 @@
----
-permalink: /index.html
----
 # my-portfolio
 A demonstration of my progress as a developer
 ## HEN short stack
