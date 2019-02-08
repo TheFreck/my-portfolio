@@ -1,5 +1,28 @@
 
+  // ****************************************************************
+  // WHY DOES IT RENDER INCORRECTLY AT FIRST?!?!?
+  // HORRIBLE UX IF THEY DON'T KNOW THEY HAVE TO SCROLL
+  // ****************************************************************
+
+
 $(document).ready(function(){
+  $(window).scrollTop(0);
+  console.log("scrollTop");
+
+  $("#top").on("click", () => {
+    console.log("top");
+    $(window).scrollTop(0);
+  });
+
+  // function top() {
+  //   console.log("top hit");
+  //   if($(window).scrollTop() === 0) {
+
+  //   }
+  //   // location.reload();
+  //   $(window).scrollTop();
+  // }
+  // top();
 
   // ****************************************************************
   // PARALLAX SCROLLING
@@ -19,8 +42,10 @@ $(document).ready(function(){
     $('#elsewhere').css('top',(0 - (scrolled * .7)) + 'px');
     $('#screen').css('top',(0 - (scrolled * 2)) + 'px');
     $('#mission').css('top',(0 - (scrolled * -2)) + 'px');
+    $('#keepScrolling').css('top',(0 - (scrolled * 2.1)) + 'px');
+    $('#prize').css('top',(0 - (scrolled *.5)) + 'px');
   }
-  
+
   // ****************************************************************
   // TO MAKE THE CAROUSEL GO
   // ****************************************************************
@@ -31,9 +56,10 @@ $(document).ready(function(){
       let instance = M.Carousel.getInstance(elem);
       instance.next(3);
   })
+
   $(".carousel").on("click", ".carBtn", function(){
-    console.log("$this: ", $(this));
-    console.log("this: ", this);
+    // console.log("$this: ", $(this));
+    // console.log("this: ", this);
     window.open(this.href);
   })
   
@@ -43,20 +69,20 @@ $(document).ready(function(){
   
   $("#profileBtn").on("click", function(event){
     event.preventDefault();
-    console.log("profile button clicked");
+    // console.log("profile button clicked");
     $.get("/profile").then(function(){
-        console.log("/profile hit");
+        // console.log("/profile hit");
         location.href = "/profile";
     });
   });
   
   $("#homeBtn").on("click", function(event){
     event.preventDefault();
-    console.log("home button clicked");
+    // console.log("home button clicked");
     $.ajax({
       method: "GET"
     }).then(function(){
-      console.log("/ hit");
+      // console.log("/ hit");
       location.href = "/";
     })
   })
@@ -139,7 +165,7 @@ $(document).ready(function(){
       src: "../images/GreedyBastards2.png",
       repo: "https://github.com/TheFreck/AwesomeFolks"
     },{
-      href: "https://enigmatic-brushlands-57933.herokuapp.com/",
+      href: "https://login-template-shen.herokuapp.com/",
       alt: "login icon",
       src: "../images/lock.jpg",
       repo: "https://github.com/TheFreck/login-template"
@@ -173,11 +199,11 @@ $(document).ready(function(){
 
   for(i=0; i<projectArray.length; i++){
     let a = $("<a class='projectDrop' target='blank'></a>");
-    console.log("first a: ", a);
+    // console.log("first a: ", a);
     let speedClass = `a${Math.floor(Math.random() * projectArray.length) + 1}`;
     a.addClass(speedClass);
     let sizeClass = `drop${Math.floor(Math.random() * 4) + 1}`
-    console.log("sizeClass: ", sizeClass);
+    // console.log("sizeClass: ", sizeClass);
     a.addClass(sizeClass);
     a.attr("href", projectArray[i].href);
     let img = $('<img class="image">');
@@ -187,8 +213,8 @@ $(document).ready(function(){
     b.attr("href", projectArray[i].href);
     img.append(b);
     a.append(img);
-    console.log("$(a): ", $(a));
-    console.log("a: ", a);
+    // console.log("$(a): ", $(a));
+    // console.log("a: ", a);
     $(".bigBox").append(a);
 
   }

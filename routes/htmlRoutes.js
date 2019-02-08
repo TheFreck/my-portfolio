@@ -4,12 +4,12 @@ module.exports = function(app) {
     // var db = require("./models");
     
     app.get("/", function(req, res){
-        console.log("/profile");
+        // console.log("/profile");
         res.render("profile", { stuff: "anything you want" });
     });
     
     app.get("/index", function(req, res) {
-        console.log("/index");
+        // console.log("/index");
         res.render("index",{data: "mush"});
     });
     

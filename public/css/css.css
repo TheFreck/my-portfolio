@@ -2,6 +2,7 @@
 
 body{
   background: brown;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .background{
@@ -64,7 +65,8 @@ body{
   margin-top: 10%;
   left: 50px;
   width: 1500px;
-  height: 500px;
+  height: 300px;
+  box-shadow: 0px 0px 100px 30px #6d815b inset;
 }
   .profilePic{
     height: 100%;
@@ -74,13 +76,13 @@ body{
     transform: rotate(90deg);
     border-radius: 2%;
     z-index: 6;
-    box-shadow: 15px -15px 50px #302e28;
+    box-shadow: 15px -15px 50px #2c3028;
   }
 .name{
-  margin-top: -900px;
+  margin-top: 50px;
   width: 700px;
   height: 250px;
-  left: 40%;
+  left: 20%;
   padding-left: 5%;
   display: inline-block;
 }
@@ -91,7 +93,7 @@ body{
     font-size: 32px;
   }
 .email{
-  margin-top: 1500px;
+  margin-top: 2300px;
   vertical-align: center;
   height: 400px;
   width: 700px;
@@ -101,8 +103,11 @@ body{
   padding: 5%;
   text-shadow: 2px 2px 4px #000000;
 }
+.emailSection{
+  color: rgb(114, 12, 12);
+}
 .projectCarousel{
-  margin-top: 1800px;
+  margin-top: 1100px;
   display: inline-block;
   height: 300px;
   width: 500px;
@@ -123,11 +128,12 @@ body{
     width: 60%;
     display: inline-block;
     font-size: 12px;
+    /* color: white; */
     margin-left: 20%;
     margin-right: 20%;
   }
 .elsewhere{
-  margin-top: 3000px;
+  margin-top: 2600px;
   bottom: 0;
   padding: 2% 5% 1% 40%;
   z-index: 5;
@@ -182,32 +188,52 @@ body{
     position: absolute;
   }
 .screen{
-  margin-top: -1050px;
+  margin-top: -550px;
   left: -15%;
-  height: 1000px;
+  height: 2000px;
   width: 130%;
   /* background-color: red; */
 }
 .screenImg{
-  background: url("../images/topo");
-  transform: rotate(180deg);
-  background-repeat: repeat-x;
-  background-size: cover;
-  opacity: .1;
+  background: url("../images/curtain.jpg");
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  opacity: .6;
   width: 100%;
   height: 100%;
 }
 .mission{
   border-top: solid;
   width: 1100px;
-  height: 400px;
+  height: 550px;
   margin-left: 5%;
   margin-top: 10%;
   padding-left: 5%;
   padding-right: 5%;
   font-size: 32px;
-  text-shadow: 2px 2px 4px #000000;
+  /* text-shadow: 2px 2px 4px #000000; */
   left: 25%;
+  background: rgba(114, 32, 12, 0.945);
+}
+.signPost{
+  margin-top: 15000px;
+  bottom: 0;
+  padding: 2% 5% 1% 40%;
+  z-index: 5;
+  height: 400px;
+  width: 95%;
+  left: -10%;
+  text-shadow: 2px 2px 4px #000000;
+}
+.prize{
+  margin-top: 5600px;
+  bottom: 0;
+  padding: 2% 5% 1% 40%;
+  z-index: 5;
+  height: 400px;
+  width: 95%;
+  right: -10%;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 
