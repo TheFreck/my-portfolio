@@ -2,7 +2,7 @@ require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
 var app = express();
-var mongoose = require("mongoose");
+// var mongoose = require("mongoose");
 require("bourbon").includePaths
 
 // var db = require("./models");
@@ -19,7 +19,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/articles", { useNewUrlParser: true });
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/portfolio", { useNewUrlParser: true });
 
 // Routes
 require("./routes/htmlRoutes.js")(app);
