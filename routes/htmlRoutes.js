@@ -5,7 +5,7 @@ module.exports = function(app) {
     
     app.get("/", function(req, res){
         // console.log("/profile");
-        res.render("profile", { stuff: "anything you want" });
+        res.render("index", { stuff: "anything you want" });
     });
     
     app.get("/index", function(req, res) {

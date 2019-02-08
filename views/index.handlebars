@@ -1,12 +1,41 @@
-<div id="bigBox" class="bigBox">
-  {{!-- <div id="aleph" class="box letterBox">aleph</div>
-  <div id="beth" class="box letterBox">beth</div>
-  <div id="gimel" class="box letterBox">gimel</div>
-  <div id="daleth" class="box letterBox">daleth</div>
-  <div id="heh" class="box letterBox">heh</div>
-  <div class="a1 drop">{{>partial/dropping}}</div>
-  <div class="a2 drop">{{>partial/dropping}}</div>
-  <div class="a3 drop">{{>partial/dropping}}</div>
-  <div class="a4 drop">{{>partial/dropping}}</div>
-  <div class="a5 drop">{{>partial/dropping}}</div> --}}
+
+<div id="background" class="box background">
+  <div class="bigBox">
+    {{!-- <a name="top">top</a> --}}
+    <section id="picture" class="picture shadowIn magnifyer">
+      {{>partial/profile-pic}}
+    </section>
+    <br>
+    <section id="name" class="box name shadowIn">
+      {{>partial/nameTitle}}
+    </section>
+    <br>
+    <section id="email" class="box email shadowIn">
+      {{>partial/email}}
+    </section>
+    <br> 
+    <section id="projectCarousel" class="box projectCarousel">
+      {{>partial/project-carousel}}
+    </section>
+    <br>
+    <section id="elsewhere" class="box elsewhere shadowIn">
+      {{>partial/elsewhere}}
+    </section>
+    <br>
+    <section id="screen" class="box screen ">
+      {{>partial/screen}}
+    </section>
+    <br>
+    <section id="mission" class="box mission bigShadowIn">
+      {{>partial/mission}}
+    </section>
+    <br>
+    <section id="keepScrolling" class="box signPost shadowIn">
+      <h1>Keep scrolling for more magic</h1>
+    </section>
+    <br>
+    <section id="prize" class="box prize shadowIn">
+      {{>partial/prize}}
+    </section>
+  </div>
 </div>

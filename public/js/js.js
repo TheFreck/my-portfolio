@@ -6,23 +6,7 @@
 
 
 $(document).ready(function(){
-  $(window).scrollTop(0);
-  console.log("scrollTop");
-
-  $("#top").on("click", () => {
-    console.log("top");
-    $(window).scrollTop(0);
-  });
-
-  // function top() {
-  //   console.log("top hit");
-  //   if($(window).scrollTop() === 0) {
-
-  //   }
-  //   // location.reload();
-  //   $(window).scrollTop();
-  // }
-  // top();
+  
 
   // ****************************************************************
   // PARALLAX SCROLLING
@@ -67,25 +51,43 @@ $(document).ready(function(){
   // BUTTONS
   // ****************************************************************
   
-  $("#profileBtn").on("click", function(event){
-    event.preventDefault();
-    // console.log("profile button clicked");
-    $.get("/profile").then(function(){
-        // console.log("/profile hit");
-        location.href = "/profile";
-    });
-  });
+  // $("#profileBtn").on("click", function(event){
+  //   event.preventDefault();
+  //   // console.log("profile button clicked");
+  //   $.get("/profile").then(function(){
+  //       // console.log("/profile hit");
+  //       location.href = "/profile";
+  //   });
+  // });
   
-  $("#homeBtn").on("click", function(event){
-    event.preventDefault();
-    // console.log("home button clicked");
-    $.ajax({
-      method: "GET"
-    }).then(function(){
-      // console.log("/ hit");
-      location.href = "/";
-    })
-  })
+  // $("#homeBtn").on("click", function(event){
+  //   event.preventDefault();
+  //   // console.log("home button clicked");
+  //   $.ajax({
+  //     method: "GET"
+  //   }).then(function(){
+  //     // console.log("/ hit");
+  //     location.href = "/";
+  //   })
+  // })
+
+  $(window).scrollTop(0);
+  console.log("scrollTop");
+
+  $("#top").on("click", () => {
+    console.log("top");
+    $(window).scrollTop(0);
+  });
+
+  // function top() {
+  //   console.log("top hit");
+  //   if($(window).scrollTop() === 0) {
+
+  //   }
+  //   // location.reload();
+  //   $(window).scrollTop();
+  // }
+  // top();
 
   // ****************************************************************
   // MAGNIFIER EFFECT
