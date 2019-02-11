@@ -16,17 +16,36 @@ $(document).ready(function(){
     parallaxScroll();
   });
   
+  // once window scroll top is to 6400 the profile pic moves up and out
+
   function parallaxScroll(){
     var scrolled = $(window).scrollTop();
+    $("#placePoint").html(Math.floor(scrolled));
     $("#background").css('top',(0 - (scrolled * -.9)) + 'px');
-    $('#picture').css('top',(0 - (scrolled * 0)) + 'px');
-    $('#name').css('top',(0 - (scrolled * -.1)) + 'px');
+    if(scrolled < 6400) {
+      $('#picture').css('top',(0 - (scrolled * 0)) + 'px');
+      $('#picture').addClass('picture');
+      $('#picture').removeClass('altPicture');
+    } else {
+      $('#picture').css('top',(0 - (scrolled * .9)) + 'px');
+      $('#picture').addClass('altPicture');
+      $('#picture').removeClass('picture');
+    }
+    if(scrolled < 7000) {
+      $('#name').css('top',(0 - (scrolled * -.1)) + 'px');
+      $('#name').addClass('name');
+      $('#name').removeClass('altName');
+    } else {
+      // $('#name').css('top',(0 - (scrolled * 0)) + 'px');
+      $('#name').addClass('altName');
+      $('#name').removeClass('name');
+    }
     $('#email').css('top',(0 - (scrolled * .9)) + 'px');
     $('#projectCarousel').css('top',(0 - (scrolled * .5)) + 'px');
     $('#elsewhere').css('top',(0 - (scrolled * .7)) + 'px');
     $('#screen').css('top',(0 - (scrolled * 2)) + 'px');
     $('#mission').css('top',(0 - (scrolled * -2)) + 'px');
-    $('#keepScrolling').css('top',(0 - (scrolled * 2.1)) + 'px');
+    $('#keepScrolling').css('top',(0 - (scrolled * 1.2)) + 'px');
     $('#prize').css('top',(0 - (scrolled *.5)) + 'px');
   }
 
@@ -78,6 +97,10 @@ $(document).ready(function(){
     console.log("top");
     $(window).scrollTop(0);
   });
+
+  $("#placeBtn").on("click", () => {
+    console.log("place: ", $(window).scrollTop());
+  })
 
   // function top() {
   //   console.log("top hit");

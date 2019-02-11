@@ -14,7 +14,7 @@ body{
   background-size: auto 100%;
   padding-right: 5%;
   padding-left: 5%;
-  color: rgb(114, 12, 12);
+  /* color: rgb(114, 12, 12); */
 }
 
 .magnifyer{
@@ -46,7 +46,21 @@ body{
 .bigShadowIn{
   box-shadow: 0px 0px 600px 100px #7c6e49 inset;
 }
-
+.image{
+  width: 200px;
+  height: 200px;
+  border-radius: 4%;
+  margin-top: 4%;
+}
+.thisPlace{
+  border: solid;
+  width: 150px;
+  background: tan;
+  padding-left: 5%;
+}
+.placeText{
+  font-size: 22px;
+}
 
 #homeBtn{
   top: 1%;
@@ -59,7 +73,6 @@ body{
 
 
 
-
 .picture{
   position: fixed;
   margin-top: 10%;
@@ -68,6 +81,14 @@ body{
   height: 300px;
   box-shadow: 0px 0px 100px 30px #6d815b inset;
 }
+  .altPicture{
+    position: fixed;
+    margin-top: 5900px;
+    left: 50px;
+    width: 1500px;
+    height: 300px;
+    box-shadow: 0px 0px 100px 30px #6d815b inset;
+  }
   .profilePic{
     height: 100%;
     background-position: center;
@@ -86,6 +107,14 @@ body{
   padding-left: 5%;
   display: inline-block;
 }
+.altName {
+  margin-top: 7000px;
+  width: 700px;
+  height: 250px;
+  left: 20%;
+  padding-left: 5%;
+  display: inline-block;
+  }
   .myName{
     font-size: 48px;          
   }
@@ -104,23 +133,22 @@ body{
   text-shadow: 2px 2px 4px #000000;
 }
 .emailSection{
+  background: rgba(94, 150, 42, 0.774);
   color: rgb(114, 12, 12);
+}
+.emailWords{
+  color: black;
 }
 .projectCarousel{
   margin-top: 1100px;
   display: inline-block;
-  height: 300px;
-  width: 500px;
+  height: 400px;
+  width: 800px;
   font-size: 22px;
   text-shadow: 2px 2px 4px #000000;
   left: 50%;
+  text-align: center;
 }
-  .image{
-    width: 200px;
-    height: 200px;
-    border-radius: 4%;
-    margin-top: 4%;
-  }
   .appBtn{
     padding-left: 1%;
     padding-right: 1%;
@@ -206,19 +234,19 @@ body{
   z-index: 19;
   border-top: solid;
   width: 1100px;
-  height: 550px;
+  height: 600px;
   margin-left: 5%;
   margin-top: 10%;
   padding-left: 5%;
   padding-right: 5%;
   font-size: 32px;
-  /* text-shadow: 2px 2px 4px #000000; */
+  text-shadow: 2px 2px 4px #da8484;
   text-shadow: -2px 2px 4px #4b5832;
   left: 25%;
   background: rgba(114, 32, 12, 0.945);
 }
 .signPost{
-  margin-top: 15000px;
+  margin-top: 9000px;
   bottom: 0;
   padding: 2% 5% 1% 40%;
   z-index: 5;
@@ -237,7 +265,6 @@ body{
   right: -10%;
   text-shadow: 2px 2px 4px #000000;
 }
-
 
 .bigBox{
   z-index: 0;
